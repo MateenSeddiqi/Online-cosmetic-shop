@@ -2,89 +2,60 @@
 {% load static %}
 
 {% block content %}
+<div class="container my-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h2 class="text-secondry mb-4">User Feedback</h2>
 
-{% load static %}
-
-<div class="container my-5 d-flex">
-  <div class="row align-items-center">
-    <div class="col-md-6">
-      <img src="{% static 'path/to/your/image.jpg' %}" alt="Feedback Image" class="img-fluid">
-    </div>
-    <div class="col-md-6">
-      <h2>Feedback</h2>
-      <form>
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="feedback" class="form-label">Feedback</label>
-          <textarea class="form-control" id="feedback" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-  </div>
-  
-  <div class="row mt-5">
-    <div class="col">
-      <h3>User Feedback</h3>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Feedback</th>
-          </tr>
-        </thead>
-        <tbody id="feedback-table-body">
-          <!-- Feedback data will be dynamically added here -->
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="bg-dark text-white">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Feedback</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-100 transition-colors duration-300">
+              <td>John Doe</td>
+              <td>johndoe@example.com</td>
+              <td>The product was great, I really enjoyed using it.</td>
+              <td>
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="btn btn-primary btn-sm mr-2">Update</a>
+                  <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-100 transition-colors duration-300">
+              <td>Jane Smith</td>
+              <td>janesmith@example.com</td>
+              <td>The customer service was excellent. I will definitely use this product again.</td>
+              <td>
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="btn btn-primary btn-sm mr-2">Update</a>
+                  <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-100 transition-colors duration-300">
+              <td>Bob Johnson</td>
+              <td>bobjohnson@example.com</td>
+              <td>I had some issues with the product, but the support team was very helpful in resolving them.</td>
+              <td>
+                <div class="d-flex justify-content-end">
+                  <a href="#" class="btn btn-primary btn-sm mr-2">Update</a>
+                  <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- <script>
-  // JavaScript code to handle form submission and add feedback to the table
-  const form = document.querySelector('form');
-  const feedbackTableBody = document.getElementById('feedback-table-body');
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const feedback = document.getElementById('feedback').value;
-
-    // Create a new table row
-    const newRow = document.createElement('tr');
-
-    // Create table cells and add data
-    const nameCell = document.createElement('td');
-    nameCell.textContent = name;
-    const emailCell = document.createElement('td');
-    emailCell.textContent = email;
-    const feedbackCell = document.createElement('td');
-    feedbackCell.textContent = feedback;
-
-    // Append cells to the new row
-    newRow.appendChild(nameCell);
-    newRow.appendChild(emailCell);
-    newRow.appendChild(feedbackCell);
-
-    // Append the new row to the table body
-    feedbackTableBody.appendChild(newRow);
-
-    // Clear the form fields
-    form.reset();
-  });
-</script> -->
-
-
 {% endblock %}
+
