@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import FeedbackForm
-from .models import Feedback
+from .forms import FeedbackForm, ProductForm
+from .models import Feedback, Product
 
 def home(request):
     feedback_form = FeedbackForm()
@@ -35,8 +35,11 @@ def delete_feedback(request, pk):
     feedback.delete()
     return redirect('displayFeedback')
 
+# Product View codes 
+
 def displayProduct(request):
-    return render(request, 'products.html')
+    products = Product.objects.all()
+    return render(request, 'products.html', {'products': products})
 
 
 def addProduct(request):

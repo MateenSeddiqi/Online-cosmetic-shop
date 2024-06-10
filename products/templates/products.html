@@ -1,7 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h5>
-    Display the product 
-</h5>
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0" style="font-size: 1.8rem; font-family: 'Montserrat', sans-serif;">Products</h2>
+            <div>
+                <a href="" class="btn btn-secondary btn-lg" style="font-family: 'Montserrat', sans-serif;">Add Product</a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" style="font-family: 'Roboto', sans-serif; font-size: 1.1rem;">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-center">Product Company</th>
+                        <th class="text-center">Product Cost</th>
+                        <th class="text-center">Product Image</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td class="align-middle text-center">{{ product.company }}</td>
+                        <td class="align-middle text-center">{{ product.cost }}</td>
+                        <td class="align-middle text-center"><img src="{{ product.image.url }}" alt="{{ product.company }} image" class="img-fluid" style="max-height: 100px;"></td>
+                        <td class="align-middle text-center text-nowrap">
+                            <a href="" class="btn btn-primary btn-sm mr-2" style="font-family: 'Montserrat', sans-serif;">Update</a>
+                            <a href="" class="btn btn-danger btn-sm" style="font-family: 'Montserrat', sans-serif;">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}
+
+
+
+
+
+<!-- <a href="{% url 'update-product' product.id %}" class="btn btn-primary btn-sm">Update</a>
+<a href="{% url 'delete-product' product.id %}" class="btn btn-danger btn-sm">Delete</a> 
+<a href="{% url 'add-product' %}" class="btn btn-primary btn-lg" style="font-family: 'Montserrat', sans-serif;">Add Product</a>-->
