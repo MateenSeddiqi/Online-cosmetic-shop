@@ -31,7 +31,7 @@
                             {% endif %}
                         </td>
                         <td class="align-middle text-center text-nowrap">
-                            <a href="" class="btn btn-primary btn-sm mr-2" style="font-family: 'Montserrat', sans-serif;">Update</a>
+                            <a href="{% url 'updateProduct' product.id %}" class="btn btn-primary btn-sm mr-2" style="font-family: 'Montserrat', sans-serif;">Update</a>
                             <a href="{%  url 'deleteProduct' product.id %}" class="btn btn-danger btn-sm" style="font-family: 'Montserrat', sans-serif;">Delete</a>
                         </td>
                     </tr>
@@ -42,11 +42,3 @@
     </div>
 {% endblock %}
 
-
-
-
-
-
-<!-- <a href="{% url 'update-product' product.id %}" class="btn btn-primary btn-sm">Update</a>
-<a href="{% url 'delete-product' product.id %}" class="btn btn-danger btn-sm">Delete</a> 
-<a href="{% url 'add-product' %}" class="btn btn-primary btn-lg" style="font-family: 'Montserrat', sans-serif;">Add Product</a>-->

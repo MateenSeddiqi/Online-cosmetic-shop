@@ -58,3 +58,17 @@ def deleteProduct(request, pk):
     product.delete()
     return redirect('manageProduct')
 
+
+def updateProduct(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES or None, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('manageProduct')
+    else:
+        # Populate the form with the existing product data
+        form = ProductForm(instance=product)
+
+    return render(request, 'updateProduct.html', {'form': form})

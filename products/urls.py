@@ -11,7 +11,7 @@ urlpatterns = [
     path('delete-feedback/<int:pk>/', views.delete_feedback, name='delete-feedback'),
     path('manageProduct/', views.manageProduct, name='manageProduct'),
     path('addProduct/', views.addProduct, name='addProduct'),
-    # path('update-product/<int:pk>/', views.update_product, name='update-product'),
+    path('updateProduct/<int:pk>/', views.updateProduct, name='updateProduct'),
     path('deleteProduct/<int:pk>/', views.deleteProduct, name='deleteProduct'),
 ]
 

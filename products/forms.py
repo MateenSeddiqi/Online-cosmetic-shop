@@ -22,11 +22,15 @@ class ProductForm(forms.ModelForm):
         fields = ['company', 'cost', 'image']
         widgets = {
             'company': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Company', 'required': True}),
-            'cost': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Cost', 'required': True}),
-            'image': forms.FileInput(attrs={'class': 'form-control', 'placeholder': 'Image', 'required': True}),
+            'cost': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Cost', 'required': True}),
+            'image': forms.FileInput(attrs={'class': 'form-control', 'placeholder': 'Image'}),
         }
         labels = {
             'company': '',
             'cost': '',
             'image': '',
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['image'].required = False

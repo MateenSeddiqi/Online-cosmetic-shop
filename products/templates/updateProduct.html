@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="card">
+                    <div class="card-header" style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: bold;">
+                        Update Product
+                    </div>
+                    <div class="card-body" style="font-family: 'Roboto', sans-serif; font-size: 1.1rem;">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="{{ form.company.id_for_label }}">{{ form.company.label }}</label>
+                                {{ form.company }}
+                            </div>
+                            <div class="form-group">
+                                <label for="{{ form.cost.id_for_label }}">{{ form.cost.label }}</label>
+                                {{ form.cost }}
+                            </div>
+                            <div class="form-group">
+                                <label for="{{ form.image.id_for_label }}">{{ form.image.label }}</label>
+                                {{ form.image }}
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary btn-lg" style="font-family: 'Montserrat', sans-serif;">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
