@@ -37,9 +37,9 @@ def delete_feedback(request, pk):
 
 # Product View codes 
 
-def displayProduct(request):
+def manageProduct(request):
     products = Product.objects.all()
-    return render(request, 'products.html', {'products': products})
+    return render(request, 'manageProduct.html', {'products': products})
 
 
 def addProduct(request):
@@ -47,7 +47,7 @@ def addProduct(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('displayProduct')
+            return redirect('manageProduct')
     else:
         form = ProductForm()
     return render(request, 'addProduct.html', {'form': form})
@@ -56,5 +56,5 @@ def addProduct(request):
 def deleteProduct(request, pk):
     product = get_object_or_404(Product, pk=pk)
     product.delete()
-    return redirect('displayProduct')
+    return redirect('manageProduct')
 
