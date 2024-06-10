@@ -72,3 +72,7 @@ def updateProduct(request, pk):
         form = ProductForm(instance=product)
 
     return render(request, 'updateProduct.html', {'form': form})
+
+
+def aboutPage(request):
+    return render(request, 'about.html', {})

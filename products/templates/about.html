@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="{% static 'products/images/about.jpg' %}" alt="About Hero" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <h1 class="display-4 font-weight-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Welcome to Our Cosmetic Shop</h1>
+                    <p class="lead mb-4" style="font-family: 'Roboto', sans-serif;">
+                        Discover the beauty of our high-quality, natural cosmetics that are designed to nourish and enhance your skin.
+                    </p>
+                    <a href="{% url 'home' %}" class="btn btn-primary btn-lg" style="font-family: 'Montserrat', sans-serif;">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 py-5 bg-white" style="border-radius: 10px;">
+        <div class="row">
+            <div class="col-lg-6 mb-5">
+                <h2 class="font-weight-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Our Mission</h2>
+                <p style="font-family: 'Roboto', sans-serif;">
+                    Our mission is to provide our customers with high-quality, natural cosmetic products that not only enhance their beauty but also promote skin health and well-being. We believe in using ethically sourced, sustainable ingredients to create effective and safe products.
+                </p>
+            </div>
+            <div class="col-lg-6 mb-5">
+                <h2 class="font-weight-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Our Commitment</h2>
+                <p style="font-family: 'Roboto', sans-serif;">
+                    We are committed to providing our customers with a personalized and exceptional shopping experience. Our knowledgeable team is dedicated to helping you find the perfect products to suit your individual needs and preferences. We take pride in our attention to detail and our commitment to customer satisfaction.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

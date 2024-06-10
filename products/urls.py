@@ -13,6 +13,7 @@ urlpatterns = [
     path('addProduct/', views.addProduct, name='addProduct'),
     path('updateProduct/<int:pk>/', views.updateProduct, name='updateProduct'),
     path('deleteProduct/<int:pk>/', views.deleteProduct, name='deleteProduct'),
+    path('aboutPage/', views.aboutPage, name='aboutPage'),
 ]
 
 if settings.DEBUG:
