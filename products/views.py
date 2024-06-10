@@ -51,3 +51,10 @@ def addProduct(request):
     else:
         form = ProductForm()
     return render(request, 'addProduct.html', {'form': form})
+
+
+def deleteProduct(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    product.delete()
+    return redirect('displayProduct')
+

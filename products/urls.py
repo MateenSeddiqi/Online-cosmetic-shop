@@ -12,7 +12,7 @@ urlpatterns = [
     path('displayProduct/', views.displayProduct, name='displayProduct'),
     path('addProduct/', views.addProduct, name='addProduct'),
     # path('update-product/<int:pk>/', views.update_product, name='update-product'),
-    # path('delete-product/<int:pk>/', views.delete_product, name='delete-product'),
+    path('deleteProduct/<int:pk>/', views.deleteProduct, name='deleteProduct'),
 ]
 
 if settings.DEBUG:
