@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h5>
-    Add the Products section
-</h5>
+    <div class="container my-5">
+        <h2 class="mb-4" style="font-size: 1.8rem; font-family: 'Montserrat', sans-serif;">Add Product</h2>
+        <form method="post" enctype="multipart/form-data" style="font-family: 'Roboto', sans-serif; font-size: 1.1rem;">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-lg" style="font-family: 'Montserrat', sans-serif;">Save</button>
+            </div>
+        </form>
+    </div>
 {% endblock %}

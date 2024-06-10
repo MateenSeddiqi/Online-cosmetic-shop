@@ -43,4 +43,11 @@ def displayProduct(request):
 
 
 def addProduct(request):
-    return render(request, 'addProduct.html')
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('displayProduct')
+    else:
+        form = ProductForm()
+    return render(request, 'addProduct.html', {'form': form})
