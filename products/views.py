@@ -35,3 +35,9 @@ def delete_feedback(request, pk):
     feedback.delete()
     return redirect('displayFeedback')
 
+def displayProduct(request):
+    return render(request, 'products.html')
+
+
+def addProduct(request):
+    return render(request, 'addProduct.html')
