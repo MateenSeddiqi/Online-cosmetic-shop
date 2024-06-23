@@ -3,8 +3,13 @@ from .forms import FeedbackForm, ProductForm
 from .models import Feedback, Product
 
 def home(request):
+    products= Product.objects.all()
     feedback_form = FeedbackForm()
-    return render(request, 'home.html', {'feedback_form': feedback_form})
+    context = {
+        'products': products,
+        'feedback_form': feedback_form,
+    }
+    return render(request, 'home.html', context)
 
 def displayFeedback(request):
     feedbacks = Feedback.objects.all()
