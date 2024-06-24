@@ -12,8 +12,9 @@
             <table class="table table-bordered table-hover" style="font-family: 'Roboto', sans-serif; font-size: 1.1rem;">
                 <thead class="table-dark">
                     <tr>
+                        <th class="text-center">Product Name</th>
                         <th class="text-center">Product Company</th>
-                        <th class="text-center">Product Cost</th>
+                        <th class="text-center">Product Price</th>
                         <th class="text-center">Product Image</th>
                         <th class="text-center">Action</th>
                     </tr>
@@ -21,8 +22,9 @@
                 <tbody>
                     {% for product in products %}
                     <tr>
+                        <td class="align-middle text-center">{{ product.name }}</td>
                         <td class="align-middle text-center">{{ product.company }}</td>
-                        <td class="align-middle text-center">{{ product.cost }}</td>
+                        <td class="align-middle text-center">{{ product.price }}</td>
                         <td class="align-middle text-center">
                             {% if product.image %}
                             <img src="{{ product.image.url }}" alt="{{ product.company }} image" class="img-fluid" style="max-height: 100px;">
