@@ -19,13 +19,15 @@ class FeedbackForm(forms.ModelForm):
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['company', 'cost', 'image']
+        fields = ['name','company', 'cost', 'image']
         widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Name', 'required': True}),
             'company': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Company', 'required': True}),
             'cost': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Cost', 'required': True}),
             'image': forms.FileInput(attrs={'class': 'form-control', 'placeholder': 'Image'}),
         }
         labels = {
+            'name': '',
             'company': '',
             'cost': '',
             'image': '',
