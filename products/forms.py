@@ -11,9 +11,9 @@ class FeedbackForm(forms.ModelForm):
             'feedback': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Feedback', 'rows': 3, 'required': True}),
         }
         labels = {
-            'name': '',
-            'email': '',
-            'feedback': '',
+            'name': 'Name',
+            'email': 'Email Address',
+            'feedback': 'Your feedback',
         }
 
 class ProductForm(forms.ModelForm):
@@ -27,12 +27,17 @@ class ProductForm(forms.ModelForm):
             'image': forms.FileInput(attrs={'class': 'form-control', 'placeholder': 'Image'}),
         }
         labels = {
-            'name': '',
-            'company': '',
-            'price': '',
-            'image': '',
+            'name': 'Product Name',
+            'company': 'Company Name',
+            'price': 'Price',
+            'image': 'Image',
         }
 
     def __init__(self, *args, **kwargs):
+        instance = kwargs.get('instance', None)
         super().__init__(*args, **kwargs)
-        self.fields['image'].required = False
+        if instance and instance.image:
+            self.fields['image'].required = False
+        else:
+            self.fields['image'].required = True
+
