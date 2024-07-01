@@ -26,11 +26,7 @@
                         <td class="align-middle text-center">{{ product.company }}</td>
                         <td class="align-middle text-center">{{ product.price }}</td>
                         <td class="align-middle text-center">
-                            {% if product.image %}
                             <img src="{{ product.image.url }}" alt="{{ product.company }} image" class="img-fluid" style="max-height: 100px;">
-                            {% else %}
-                            <span>No image available</span>
-                            {% endif %}
                         </td>
                         <td class="align-middle text-center text-nowrap">
                             <a href="{% url 'updateProduct' product.id %}" class="btn btn-primary btn-sm mr-2" style="font-family: 'Montserrat', sans-serif;">Update</a>

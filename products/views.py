@@ -66,7 +66,6 @@ def deleteProduct(request, pk):
 
 def updateProduct(request, pk):
     product = get_object_or_404(Product, pk=pk)
-
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES or None, instance=product)
         if form.is_valid():
@@ -76,17 +75,6 @@ def updateProduct(request, pk):
         # Populate the form with the existing product data
         form = ProductForm(instance=product)
     return render(request, 'updateProduct.html', {'form': form})
-
-
-# def update_product(request, pk):
-#     product = get_object_or_404(Product, pk=pk)
-#     form = ProductForm(instance=product)
-#     if request.method == 'POST':
-#         form = ProductForm(request.POST, request.FILES, instance=product)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('product_list')
-#     return render(request, 'product_form.html', {'form': form, 'product': product})
 
 
 def aboutPage(request):
