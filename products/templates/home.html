@@ -2,7 +2,16 @@
 {% load static %}
 
 {% block content %}
-<div class="container my-5">
+
+
+
+
+
+
+
+
+
+<div class="container-fluid my-5">
   <div class="card bg-light shadow-sm mb-3">
     <div class="card-body">
       <h2 class="text-secondry mb-4">Our Fashion Designs</h2>
@@ -11,9 +20,9 @@
   </div>
   <div class="row">
     {% for product in products %}
-    <div class="col-lg-4 col-md-4 col-sm-12">
-        <div class="card h-100 bg-light shadow-sm">
-          <img src="{{ product.image.url  }}" class="card-img-top" alt="Fashion Design 1">
+    <div class="col-lg-4 col-md-4 col-sm-12">    
+        <div class="card h-150 bg-light shadow-sm">
+          <img src="{{ product.image.url  }}" class="card-img-top m-3 p-3" alt="Fashion Design" width="100" height="250" >
           <div class="card-body">
             <h5 class="card-title">Fashion Design 1</h5>
             <p class="card-text">{{ product.company }}</p>
@@ -24,7 +33,7 @@
     {% endfor %}
   </div>
 
-  <div class="container my-5 d-flex">
+  <div class="container my-5 d-flex bg-light">
     <div class="row align-items-center">
       <div class="col-md-6">
         <h2>Feedback</h2>
