@@ -3,20 +3,26 @@
 
 {% block content %}
 <div class="product-display-container my-3">
-  <div class="jumbotron bg-primary text-white shadow-sm mb-3">
-    <h3 class="display-8">Discover Our Stylish Designs</h3>
-    <p class="lead">Explore our latest fashion collections and find the perfect fit for your unique style.</p>
+  <div class="jumbotron bg-dark text-white shadow-sm mb-3">
+    <div class="header-content">
+      <h5 class="display-8">Discover Our Stylish Designs</h5>
+      <p class="lead">Explore our latest fashion collections and find the perfect fit for your unique style.</p>
+    </div>
   </div>
   <div class="row">
     {% for product in products %}
-    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
       <div class="card h-100 shadow-sm">
         <img src="{{ product.image.url }}" class="card-img-top object-fit-cover" alt="Fashion Design" style="height: 250px;">
         <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.company }}</p>
-          <p class="card-text font-weight-bold">{{ product.price }}</p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
+          <div class="product-description">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.company }}</p>
+            <p class="card-text font-weight-bold">{{ product.price }}</p>
+          </div>
+          <div class="product-action">
+            <a href="#" class="btn btn-primary">Shop Now</a>
+          </div>
         </div>
       </div>
     </div>
