@@ -1,17 +1,17 @@
 .product-display-container{
-    width: 80%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
 }
 
-.jumbotron{
-    margin: 0;
-    height: 8rem;
+.home_header{
+  height: 6rem;
+  border-radius: 10px;
+  padding: 1rem;
 }
-
 .header-content{
     margin: 0;
-    /* padding: 0.5rem 0.5rem; */
 }
+
 
 .card-body{
     display: flex;
