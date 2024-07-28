@@ -23,3 +23,41 @@
     padding-top: 4rem;
 }
 
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(97, 99, 100, 0.7); /* Bootstrap primary color with transparency */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.btn-view-details {
+  background-color: white; /* Button background color */
+  color: #007bff; /* Bootstrap primary text color */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* No border */
+  transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+}
+
+.btn-view-details:hover {
+  background-color: #007bff; /* Change to primary color on hover */
+  color: white; /* Change text color on hover */
+}
