@@ -52,7 +52,7 @@ class ContactUsForm(forms.ModelForm):
             'message': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Message', 'required': True}),
         }
         labels = {
-            'name': 'Name',
+            'name':'Name',
             'email': 'Email Address',
             'phone': 'Phone Number',
             'message': 'Your Message',
