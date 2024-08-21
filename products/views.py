@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import FeedbackForm, ProductForm
+from .forms import FeedbackForm, ProductForm, ContactUsForm
 from .models import Feedback, Product
 
 def home(request):
@@ -81,4 +81,5 @@ def aboutPage(request):
     return render(request, 'about.html', {})
 
 def contactUs(request):
-    return render (request, 'contactUs.html')
+    contactUs = ContactUsForm
+    return render (request, 'contactUs.html', {'contactUs': contactUs})

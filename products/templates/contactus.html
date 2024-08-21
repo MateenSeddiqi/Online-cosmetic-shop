@@ -3,6 +3,10 @@
 
 {% block content %}
 
-<h1>Contact page</h1>
+<form action="post">
+    {% csrf_token %}
+    {{ contactUs.as_p }}
+    <button type="submit">Submit</button>
+</form>
 
 {% endblock %}
