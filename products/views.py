@@ -79,3 +79,6 @@ def updateProduct(request, pk):
 
 def aboutPage(request):
     return render(request, 'about.html', {})
+
+def contactUs(request):
+    return render (request, 'contactUs.html')
