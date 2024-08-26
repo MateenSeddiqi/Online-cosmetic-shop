@@ -81,5 +81,11 @@ def aboutPage(request):
     return render(request, 'about.html', {})
 
 def contactUs(request):
-    contactUs = ContactUsForm
+    if request.method == 'POST':
+        contactUs = ContactUsForm(request.POST)
+        if contactUs.is_valid():
+            contactUs.save()
+            return redirect('home')
+    else:
+        contactUs = ContactUsForm
     return render (request, 'contactUs.html', {'contactUs': contactUs})
