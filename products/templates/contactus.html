@@ -3,10 +3,27 @@
 
 {% block content %}
 
-<form action="post">
-    {% csrf_token %}
-    {{ contactUs.as_p }}
-    <button type="submit">Submit</button>
-</form>
-
+<div class="container mt-5">
+    <h4>Contact Us</h4>
+    <form action="POST">
+        {% csrf_token %}
+        <div>
+            <label for="{{ contactUs.name.id_for_label }}">{{ contactUs.name.label  }}</label>
+            {{ contactUs.name }}
+        </div>
+        <div>
+            <label for="contactUs.email.id_for_label"> {{ contactUs.email.label }} </label>
+            {{ contactUs.email }}
+        </div>
+        <div>
+            <label for="contactUs.phone.id_for_label">{{ contactUs.phone.label }}</label>
+            {{ contactUs.phone }}
+        </div>
+        <div>
+            <label for="contactUs.message.id_for_label">{{ contactUs.message.label }}</label>
+            {{ contactUs.message}}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
 {% endblock %}
