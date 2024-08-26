@@ -8,20 +8,20 @@
     <form method="POST">
         {% csrf_token %}
         <div class="mb-3">
-            <label for="{{ contactUs.name.id_for_label }}" class="form-label">{{ contactUs.name.label }}</label>
-            <input type="text" name="{{ contactUs.name.name }}" id="{{ contactUs.name.id_for_label }}" class="form-control" value="{{ contactUs.name.value|default:'' }}">
+            <label for="{{ contactUs.name.id_for_label }}">{{ contactUs.name.label }}</label>
+            {{ contactUs.name }}
         </div>
         <div class="mb-3">
             <label for="{{ contactUs.email.id_for_label }}" class="form-label">{{ contactUs.email.label }}</label>
-            <input type="email" name="{{ contactUs.email.name }}" id="{{ contactUs.email.id_for_label }}" class="form-control" value="{{ contactUs.email.value|default:'' }}">
+            {{ contactUs.email }}
         </div>
         <div class="mb-3">
             <label for="{{ contactUs.phone.id_for_label }}" class="form-label">{{ contactUs.phone.label }}</label>
-            <input type="text" name="{{ contactUs.phone.name }}" id="{{ contactUs.phone.id_for_label }}" class="form-control" value="{{ contactUs.phone.value|default:'' }}">
+            {{ contactUs.phone }}
         </div>
         <div class="mb-3">
             <label for="{{ contactUs.message.id_for_label }}" class="form-label">{{ contactUs.message.label }}</label>
-            <textarea name="{{ contactUs.message.name }}" id="{{ contactUs.message.id_for_label }}" class="form-control">{{ contactUs.message.value|default:'' }}</textarea>
+            {{ contactUs.message }}
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
