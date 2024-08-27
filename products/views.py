@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import FeedbackForm, ProductForm, ContactUsForm
 from .models import Feedback, Product
+from django.http import HttpResponse
 
 def home(request):
     products= Product.objects.all()
@@ -86,24 +87,7 @@ def contactUs(request):
         if contactUs.is_valid():
             contactUs.save()
             return redirect('home')
+        
     else:
         contactUs = ContactUsForm
     return render (request, 'contactUs.html', {'contactUs': contactUs})
-
-
-
-# from django.shortcuts import render, redirect
-# from .forms import ContactUsForm  # Make sure to import your form
-# from django.http import HttpResponse
-
-# def contact_view(request):
-#     if request.method == 'POST':
-#         form = ContactUsForm(request.POST)
-#         if form.is_valid():
-#             # Save the form data to the database
-#             form.save()
-#             return HttpResponse(f'Thank you, {form.cleaned_data["name"]}. Your message has been received!')
-#     else:
-#         form = ContactUsForm()  # Create an empty form instance for GET request
-
-#     return render(request, 'contact.html', {'form': form})  # Pass the form to the template
