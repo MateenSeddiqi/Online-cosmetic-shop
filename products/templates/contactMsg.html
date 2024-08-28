@@ -14,9 +14,15 @@
             </tr>
         </thead>
         <tbody>
-            
+            {% for contactMsg in contactMsgs %}
+            <tr>
+                <td>{{ contactMsg.name }}</td>
+                <td>{{ contactMsg.email }}</td>
+                <td>{{ contactMsg.phone }}</td>
+                <td>{{ contactMsg.message }}</td>
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>
-
 {% endblock %}
