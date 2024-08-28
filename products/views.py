@@ -81,7 +81,7 @@ def updateProduct(request, pk):
 def aboutPage(request):
     return render(request, 'about.html', {})
 
-def contactUs(request):
+def contact(request):
     if request.method == 'POST':
         contactUs = ContactUsForm(request.POST)
         if contactUs.is_valid():
