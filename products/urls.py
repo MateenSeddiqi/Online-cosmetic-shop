@@ -15,6 +15,7 @@ urlpatterns = [
     path('deleteProduct/<int:pk>/', views.deleteProduct, name='deleteProduct'),
     path('aboutPage/', views.aboutPage, name='aboutPage'),
     path('contactUs/', views.contactUs, name='contactUs'),
+    path('contactMsg/', views.ContactMsg, name='contactMsg'),
 ]
 
 if settings.DEBUG:

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import FeedbackForm, ProductForm, ContactUsForm
-from .models import Feedback, Product
+from .models import Feedback, Product, contactUs
 from django.http import HttpResponse
 
 def home(request):
@@ -91,3 +91,7 @@ def contactUs(request):
     else:
         contactUs = ContactUsForm
     return render (request, 'contactUs.html', {'contactUs': contactUs})
+
+def ContactMsg(request):
+    contact_msgs = contactUs.objects.all()
+    return render(request, 'contactMsg.html', {'contactMsgs': contact_msgs})
