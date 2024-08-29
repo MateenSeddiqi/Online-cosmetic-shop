@@ -4,25 +4,31 @@
 {% block content %}
 
 <div class="container my-5">
-    <table>
-        <thead>
-            <tr>
-                <th>User Name</th>
-                <th>User email</th>
-                <th>User Phone</th>
-                <th>User User Message</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for contactMsg in contactMsgs %}
-            <tr>
-                <td>{{ contactMsg.name }}</td>
-                <td>{{ contactMsg.email }}</td>
-                <td>{{ contactMsg.phone }}</td>
-                <td>{{ contactMsg.message }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>User email</th>
+                            <th>User Phone</th>
+                            <th>User User Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for contactMsg in contactMsgs %}
+                        <tr>
+                            <td>{{ contactMsg.name }}</td>
+                            <td>{{ contactMsg.email }}</td>
+                            <td>{{ contactMsg.phone }}</td>
+                            <td>{{ contactMsg.message }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
