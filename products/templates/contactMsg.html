@@ -24,7 +24,11 @@
                             <td>{{ contactMsg.email }}</td>
                             <td>{{ contactMsg.phone }}</td>
                             <td>{{ contactMsg.message }}</td>
-                            
+                            <td>
+                                <div>
+                                    <a href="{% url 'deleteContactMsg' contactMsg.id %}" class="btn btn-danger btn-sm">Delete</a>
+                                </div>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
