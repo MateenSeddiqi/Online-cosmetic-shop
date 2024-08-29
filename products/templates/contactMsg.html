@@ -8,12 +8,13 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-hover">
-                    <thead>
+                    <thead class="bg-secondary text-white">
                         <tr>
                             <th>User Name</th>
                             <th>User email</th>
                             <th>User Phone</th>
                             <th>User User Message</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,6 +24,7 @@
                             <td>{{ contactMsg.email }}</td>
                             <td>{{ contactMsg.phone }}</td>
                             <td>{{ contactMsg.message }}</td>
+                            
                         </tr>
                         {% endfor %}
                     </tbody>

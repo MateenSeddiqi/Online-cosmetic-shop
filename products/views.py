@@ -95,3 +95,8 @@ def contact(request):
 def ContactMsg(request):
     contact_msgs = contactUs.objects.all()
     return render(request, 'contactMsg.html', {'contactMsgs': contact_msgs})
+
+def deleteContactMsg(request, pk):
+    contact_msgs = get_object_or_404(contactUs, pk=pk)
+    contact_msgs.delete()
+    return redirect('contactMsg')
