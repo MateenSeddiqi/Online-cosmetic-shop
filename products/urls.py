@@ -17,7 +17,7 @@ urlpatterns = [
     path('contactUs/', views.contact, name='contactUs'),
     path('contactMsg/', views.ContactMsg, name='contactMsg'),
     path('deleteContactMsg/<int:pk>', views.deleteContactMsg, name='deleteContactMsg'),
-    path('ProductDetail/', views.ProductDetail, name='ProductDetail'),
+    path('ProductDetail/<int:pk>', views.ProductDetail, name='ProductDetail'),
 ]
 
 if settings.DEBUG:
