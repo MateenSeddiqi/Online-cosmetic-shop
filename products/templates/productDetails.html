@@ -2,6 +2,14 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .product-image img {
+        width: 300px; /* Set your desired width */
+        height: 300px; /* Set your desired height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+    }
+</style>
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-6">
@@ -25,13 +33,35 @@
 
                 <hr class="my-4">
 
-                <h5 class="text-uppercase">Customer Reviews</h5>
-                <div class="review-rating d-flex align-items-center">
-                    <span class="badge bg-warning text-dark me-2">{{ product.review_rating }}</span>
-                    <span class="text-muted">Based on {{ product.review_count }} reviews</span>
+                <h5 class="text-uppercase">Rate This Product</h5>
+                <div class="d-flex align-items-center">
+                    <form method="post" action="" id="rating-form" class="me-3">
+                        {% csrf_token %}
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="user_rating" value="5" required>
+                            <label for="star5" class="star" onclick="submitRating(5)">&#9733;</label>
+                            <input type="radio" id="star4" name="user_rating" value="4">
+                            <label for="star4" class="star" onclick="submitRating(4)">&#9733;</label>
+                            <input type="radio" id="star3" name="user_rating" value="3">
+                            <label for="star3" class="star" onclick="submitRating(3)">&#9733;</label>
+                            <input type="radio" id="star2" name="user_rating" value="2">
+                            <label for="star2" class="star" onclick="submitRating(2)">&#9733;</label>
+                            <input type="radio" id="star1" name="user_rating" value="1">
+                            <label for="star1" class="star" onclick="submitRating(1)">&#9733;</label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function submitRating(rating) {
+        const form = document.getElementById('rating-form');
+        const input = form.querySelector(`input[name="user_rating"][value="${rating}"]`);
+        input.checked = true; // Check the selected star
+        form.submit(); // Submit the form
+    }
+</script>
 {% endblock %}

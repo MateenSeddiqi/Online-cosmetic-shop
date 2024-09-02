@@ -97,3 +97,29 @@
 hr {
   border-top: 1px solid #e0e0e0; /* Subtle divider */
 }
+
+.star-rating {
+  direction: rtl; /* Reverse the order of stars */
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 2rem; /* Size of the stars */
+  color: #ccc; /* Default star color */
+  cursor: pointer;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: #f39c12; /* Color on hover */
+}
+
+input[type="radio"] {
+  display: none; /* Hide radio buttons */
+}
+
+input[type="radio"]:checked ~ .star {
+  color: #f39c12; /* Color for selected stars */
+}
