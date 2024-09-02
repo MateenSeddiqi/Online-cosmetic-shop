@@ -61,3 +61,39 @@
   background-color: #007bff; /* Change to primary color on hover */
   color: white; /* Change text color on hover */
 }
+
+
+.container {
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.product-image img {
+  border-radius: 15px;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.description {
+  line-height: 1.6; /* Improved readability */
+}
+
+.action-buttons a {
+  margin-right: 10px; /* Spacing between buttons */
+}
+
+.review-rating {
+  font-size: 1.1rem; /* Slightly larger for emphasis */
+}
+
+hr {
+  border-top: 1px solid #e0e0e0; /* Subtle divider */
+}
