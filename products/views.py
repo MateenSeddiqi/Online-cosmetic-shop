@@ -100,3 +100,6 @@ def deleteContactMsg(request, pk):
     contact_msgs = get_object_or_404(contactUs, pk=pk)
     contact_msgs.delete()
     return redirect('contactMsg')
+
+def ProductDetail(request):
+    return render(request, 'productDetails.html')
