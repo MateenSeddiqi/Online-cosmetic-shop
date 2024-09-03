@@ -8,7 +8,7 @@
 
 /****** Home Page CSS Code ******/
 /****************************/
-.product-display-container {
+.hero-display-container {
   width: 75%;
   margin: auto;
 }
@@ -47,6 +47,12 @@
 
 /* HomePage Cards section CSS codes */
 /******************************/
+.product-section-container{
+  background-color: #f9f9f9;  
+  width: 95%;
+  margin: auto;
+  padding: 30px;
+}
 .card {
   border: none; 
   border-radius: 10px; 
@@ -73,12 +79,21 @@
   margin: 0.5rem 0;
 }
 
-.btn {
-  margin-top: 1rem; 
+.card-btn {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;
+}
+
+.card-btn .btn {
+  margin-top: 1rem;
+  margin-bottom: 10px;
 }
 
 .image-container {
   position: relative;
+  padding: 10px;
+  border-radius: 2px;
 }
 
 .overlay {

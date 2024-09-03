@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="product-display-container my-5">
+<div class="hero-display-container my-5">
   <header class="hero">
     <div class="hero-overlay">
         <h1 class="display-4">Unleash Your Style</h1>
@@ -10,10 +10,10 @@
     </div>
   </header>
 
-  <section class="product-grid container p-4 my-4">
+  <section class="product-section-container product-grid p-4 my-4">
     <div class="row">
       {% for product in products %}
-      <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
+      <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
         <div class="card border-0 rounded-lg shadow-lg overflow-hidden">
           <div class="image-container">
             <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" style="height: 300px; object-fit: cover;">
@@ -27,7 +27,10 @@
               <p class="card-text text-muted">{{ product.company }}</p>
              <p class="card-text font-weight-bold text-success">{{ product.price }}</p>
             </div>
-            <a href="#" class="btn btn-primary">Shop Now</a>
+            <div class="card-btn">
+              <a href="#" class="btn btn-primary">Shop Now</a>
+              <a href="#" class="btn btn-secondary">Add to Cart</a>
+            </div>
           </div>
         </div>
       </div>
