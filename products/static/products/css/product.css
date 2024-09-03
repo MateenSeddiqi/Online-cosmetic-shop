@@ -1,8 +1,20 @@
+/* Home Page CSS Code */
+/* ===================*/
+
+.product-display-container {
+  width: 75%;
+  margin: auto;
+}
+
 .hero {
+  background-image: url('/static/products/images/hero.jpg');
   background-size: cover; 
   background-position: center; 
-  height: 60vh; 
   position: relative; 
+  height: 20rem; 
+  border-radius: 10px;
+  padding: 2rem; 
+  color: white; 
 }
 
 .hero-overlay {
@@ -17,26 +29,16 @@
   border-radius: 10px; 
 }
 
-
 .hero h1, .hero p {
   margin: 0; 
-}
-
-.product-display-container {
-  width: 75%;
-  margin: auto;
-}
-
-.hero {
-  height: 20rem; 
-  border-radius: 10px;
-  padding: 2rem; 
-  color: white; 
 }
 
 .product-grid {
   margin-top: 2rem; 
 }
+
+/* HomePage Cards section CSS codes */
+/* --------------------------------*/
 
 .card {
   border: none; 
@@ -59,12 +61,6 @@
   margin-right: 1rem; 
 }
 
-.card {
-  border: none; 
-  border-radius: 10px; 
-}
-
-
 .card-title,
 .card-text {
   margin: 0.5rem 0;
@@ -73,7 +69,6 @@
 .btn {
   margin-top: 1rem; 
 }
-
 
 .image-container {
   position: relative;
@@ -85,7 +80,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,34 +89,22 @@
 }
 
 .image-container:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1; 
 }
 
-.btn-light {
-  background-color: white; /* Button background color */
-  color: #007bff; /* Bootstrap primary text color */
-  padding: 10px 20px; /* Button padding */
-  border-radius: 5px; /* Rounded corners */
-  border: none; /* No border */
-  transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
-}
-
-.btn-light:hover {
-  background-color: #007bff; /* Change to primary color on hover */
-  color: white; /* Change text color on hover */
-}
-
-
+/* HomePage Feedback section CSS codes */
+/* --------------------------------*/
 
 .feedback-section {
-  margin-top: 4rem; /* Space above feedback section */
-  padding: 2rem; /* Padding for feedback section */
-  border-radius: 10px; /* Rounded corners */
+  margin-top: 4rem; 
+  padding: 2rem; 
+  border-radius: 10px; 
 }
 
 .feedback-section img {
-  border-radius: 10px; /* Rounded corners for feedback image */
+  border-radius: 10px; 
 }
+
 
 
 
@@ -129,7 +112,7 @@
 
 
 .container {
-  background-color: #f9f9f9; /* Light background for contrast */
+  background-color: #f9f9f9;  
   border-radius: 15px;
   padding: 30px;
 }
