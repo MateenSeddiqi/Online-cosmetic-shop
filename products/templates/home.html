@@ -3,10 +3,12 @@
 
 {% block content %}
 <div class="product-display-container my-5">
-  <header class="hero bg-primary text-white text-center py-5">
-    <h1 class="display-4">Unleash Your Style</h1>
-    <p class="lead">Dive into our exclusive fashion collections tailored just for you.</p>
-  </header>
+  <header class="hero" style="background-image: url('{% static 'products/images/hero.jpg' %}');">
+    <div class="hero-overlay">
+        <h1 class="display-4">Unleash Your Style</h1>
+        <p class="lead">Dive into our exclusive fashion collections tailored just for you.</p>
+    </div>
+</header>
 
   <section class="product-grid container my-4">
     <div class="row">

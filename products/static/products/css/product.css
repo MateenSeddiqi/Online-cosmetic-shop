@@ -1,3 +1,27 @@
+.hero {
+  background-size: cover; 
+  background-position: center; 
+  height: 60vh; 
+  position: relative; 
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; 
+  background-color: rgba(52, 50, 50, 0.8); 
+  padding: 20px; 
+  border-radius: 10px; 
+}
+
+
+.hero h1, .hero p {
+  margin: 0; 
+}
+
 .product-display-container {
   width: 75%;
   margin: auto;
