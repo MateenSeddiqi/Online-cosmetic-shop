@@ -1,6 +1,13 @@
-/* Home Page CSS Code */
-/* ===================*/
+/*****CSS General Codes*******/
+.container {
+  background-color: #f9f9f9;  
+  border-radius: 15px;
+  padding: 30px;
+}
 
+
+/****** Home Page CSS Code ******/
+/****************************/
 .product-display-container {
   width: 75%;
   margin: auto;
@@ -36,10 +43,10 @@
 .product-grid {
   margin-top: 2rem; 
 }
+/************************************/
 
 /* HomePage Cards section CSS codes */
-/* --------------------------------*/
-
+/******************************/
 .card {
   border: none; 
   border-radius: 10px; 
@@ -91,10 +98,11 @@
 .image-container:hover .overlay {
   opacity: 1; 
 }
+/************************************/
+
 
 /* HomePage Feedback section CSS codes */
 /* --------------------------------*/
-
 .feedback-section {
   margin-top: 4rem; 
   padding: 2rem; 
@@ -104,21 +112,16 @@
 .feedback-section img {
   border-radius: 10px; 
 }
+/************************************/
 
 
-
-
-
-
-
-.container {
-  background-color: #f9f9f9;  
-  border-radius: 15px;
-  padding: 30px;
-}
+/****** Product Details CSS Code ********/
+/************************************/
 
 .product-image img {
-  border-radius: 15px;
+  width: 300px; 
+  height: 300px; 
+  object-fit: cover; 
 }
 
 .product-title {
@@ -131,43 +134,42 @@
 }
 
 .description {
-  line-height: 1.6; /* Improved readability */
+  line-height: 1.6; 
 }
 
 .action-buttons a {
-  margin-right: 10px; /* Spacing between buttons */
-}
-
-.review-rating {
-  font-size: 1.1rem; /* Slightly larger for emphasis */
+  margin-right: 10px; 
 }
 
 hr {
-  border-top: 1px solid #e0e0e0; /* Subtle divider */
+  border-top: 1px solid #e0e0e0; 
 }
 
 .star-rating {
-  direction: rtl; /* Reverse the order of stars */
+  direction: rtl; 
   display: flex;
   justify-content: flex-start;
   margin-top: 10px;
 }
 
 .star {
-  font-size: 2rem; /* Size of the stars */
-  color: #ccc; /* Default star color */
+  font-size: 2rem;
+  color: #ccc; 
   cursor: pointer;
 }
 
 .star:hover,
 .star:hover ~ .star {
-  color: #f39c12; /* Color on hover */
+  color: #f39c12; 
 }
 
 input[type="radio"] {
-  display: none; /* Hide radio buttons */
+  display: none;
 }
 
 input[type="radio"]:checked ~ .star {
   color: #f39c12; /* Color for selected stars */
 }
+
+/************************************/
+
