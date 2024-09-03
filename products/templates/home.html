@@ -2,52 +2,51 @@
 {% load static %}
 
 {% block content %}
-<div class="product-display-container my-3">
-  <div class="home_header bg-dark text-white shadow-sm mb-3">
-    <div class="header-content">
-      <h5 class="display-8">Discover Our Stylish Designs</h5>
-      <p class="lead">Explore our latest fashion collections and find the perfect fit for your unique style.</p>
-    </div>
-  </div>
-  <div class="bg-light row p-4 ">
-    {% for product in products %}
-    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="image-container position-relative">
-          <img src="{{ product.image.url }}" class="card-img-top object-fit-cover" alt="Fashion Design" style="height: 250px;">
-          <div class="card-overlay">
-            <a href="{% url 'ProductDetail' product.id %}" class="btn btn-view-details">View Details</a>
+<div class="product-display-container my-5">
+  <header class="hero bg-primary text-white text-center py-5">
+    <h1 class="display-4">Unleash Your Style</h1>
+    <p class="lead">Dive into our exclusive fashion collections tailored just for you.</p>
+  </header>
+
+  <section class="product-grid container my-4">
+    <div class="row">
+      {% for product in products %}
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card border-0 rounded-lg shadow-lg overflow-hidden">
+          <div class="image-container">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" style="height: 300px; object-fit: cover;">
+            <div class="overlay">
+              <a href="{% url 'ProductDetail' product.id %}" class="btn btn-light">View Details</a>
+            </div>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="product-description">
-            <h5 class="card-title">{{ product.name }}</h5>
-            <p class="card-text">{{ product.company }}</p>
-            <p class="card-text font-weight-bold">{{ product.price }}</p>
-          </div>
-          <div class="product-action">
-            <a href="#" class="btn btn-secondary">Shop Now</a>
+          <div class="card-body">
+            <div class="text-content">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text text-muted">{{ product.company }}</p>
+             <p class="card-text font-weight-bold text-success">{{ product.price }}</p>
+            </div>
+            <a href="#" class="btn btn-primary">Shop Now</a>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-  <div class="container my-5 bg-light shadow-sm p-4">
+  </section>
+
+  <section class="feedback-section container my-5 bg-light rounded-lg shadow-sm p-4">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h2>Share Your Feedback</h2>
+        <h2>We Value Your Feedback</h2>
         <form method="post" action="{% url 'add-feedback' %}">
           {% csrf_token %}
           {{ feedback_form.as_p }}
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-success">Submit Feedback</button>
         </form>
       </div>
       <div class="col-md-6">
-        <img src="{% static 'products/images/feedback.jpg' %}" alt="Feedback Image" class="img-fluid">
+        <img src="{% static 'products/images/feedback.jpg' %}" alt="Feedback" class="img-fluid rounded">
       </div>
     </div>
-  </div>
-
+  </section>
 </div>
 {% endblock %}

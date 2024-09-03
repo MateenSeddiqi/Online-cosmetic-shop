@@ -1,54 +1,79 @@
-.product-display-container{
+.product-display-container {
   width: 75%;
   margin: auto;
 }
 
-.home_header{
-  height: 6rem;
+.hero {
+  height: 20rem; 
   border-radius: 10px;
-  padding: 1rem;
-}
-.header-content{
-    margin: 0;
+  padding: 2rem; 
+  color: white; 
 }
 
-
-.card-body{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.product-grid {
+  margin-top: 2rem; 
 }
-
-.product-action{
-    padding-top: 4rem;
-}
-
 
 .card {
-    position: relative;
-    overflow: hidden;
+  border: none; 
+  border-radius: 10px; 
+  transition: transform 0.2s; 
 }
 
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(97, 99, 100, 0.7); /* Bootstrap primary color with transparency */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
+.card:hover {
+  transform: scale(1.05); 
 }
 
-.card:hover .card-overlay {
-    opacity: 1;
+.card-body {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
 }
 
-.btn-view-details {
+.text-content {
+  flex-grow: 1; 
+  margin-right: 1rem; 
+}
+
+.card {
+  border: none; 
+  border-radius: 10px; 
+}
+
+
+.card-title,
+.card-text {
+  margin: 0.5rem 0;
+}
+
+.btn {
+  margin-top: 1rem; 
+}
+
+
+.image-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.btn-light {
   background-color: white; /* Button background color */
   color: #007bff; /* Bootstrap primary text color */
   padding: 10px 20px; /* Button padding */
@@ -57,10 +82,26 @@
   transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
 }
 
-.btn-view-details:hover {
+.btn-light:hover {
   background-color: #007bff; /* Change to primary color on hover */
   color: white; /* Change text color on hover */
 }
+
+
+
+.feedback-section {
+  margin-top: 4rem; /* Space above feedback section */
+  padding: 2rem; /* Padding for feedback section */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.feedback-section img {
+  border-radius: 10px; /* Rounded corners for feedback image */
+}
+
+
+
+
 
 
 .container {
