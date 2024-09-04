@@ -21,7 +21,7 @@ def add_feedback(request):
         form = FeedbackForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('displayFeedback')
+            # return redirect('displayFeedback')
     return redirect('home')
 
 def update_feedback(request, pk):
