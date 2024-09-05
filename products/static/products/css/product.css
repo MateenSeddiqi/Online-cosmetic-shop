@@ -188,3 +188,61 @@ input[type="radio"]:checked ~ .star {
 
 /************************************/
 
+
+/****** Footer CSS Code ********/
+/************************************/
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 0;
+}
+
+footer div {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+footer div > div {
+  margin-bottom: 30px;
+}
+
+footer h5 {
+  font-weight: bold;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer a {
+  color: white;
+  margin-right: 15px;
+}
+
+footer a i {
+  font-size: 24px;
+}
+
+footer form {
+  display: flex;
+  justify-content: center;
+}
+
+footer input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+footer button {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+/************************************/
