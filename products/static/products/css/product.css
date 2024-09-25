@@ -197,14 +197,10 @@ footer {
   padding: 10px 0;
 }
 
-footer div {
-  max-width: 1200px;
+footer .row {
+  padding: 2rem 3rem;
   margin: auto;
   text-align: center;
-}
-
-footer div > div {
-  margin-bottom: 30px;
 }
 
 footer h5 {
