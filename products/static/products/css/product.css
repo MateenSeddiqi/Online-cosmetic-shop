@@ -203,6 +203,18 @@ footer .row {
   text-align: center;
 }
 
+.footer-terms li a {
+  color: white;
+  text-decoration: none; 
+  margin: 5px 0;
+  transition: color 0.3s; 
+}
+
+.footer-terms li a:hover{
+  color: #62bcf5;
+  text-decoration: none; 
+}
+
 footer h5 {
   font-weight: bold;
 }
